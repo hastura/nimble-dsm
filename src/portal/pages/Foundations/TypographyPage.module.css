@@ -1,0 +1,193 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-xxl);
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-md);
+}
+
+.pageTitle {
+  font-family: var(--nimble-font-headline);
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--nimble-white);
+}
+
+.pageDesc {
+  color: var(--nimble-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 580px;
+}
+
+/* ── Block section ───────────────────────────────────────────── */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-lg);
+}
+
+.blockLabel {
+  font-family: var(--nimble-font-headline);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--nimble-gray-dim);
+  padding-bottom: var(--nimble-space-sm);
+  border-bottom: 1px solid #1e1e1e;
+}
+
+/* ── Font cards ──────────────────────────────────────────────── */
+.fontCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--nimble-space-lg);
+}
+
+.fontCard {
+  display: flex;
+  gap: var(--nimble-space-lg);
+  padding: var(--nimble-space-xl);
+  background: var(--nimble-charcoal);
+  border: 1px solid #222;
+}
+
+.fontSample {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--nimble-white);
+  line-height: 1;
+  flex-shrink: 0;
+  width: 100px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.fontMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fontName {
+  font-family: var(--nimble-font-headline);
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: var(--nimble-white);
+}
+
+.fontRole {
+  font-family: var(--nimble-font-body);
+  font-size: 0.75rem;
+  color: var(--nimble-gray);
+}
+
+.tokenBtn {
+  background: none;
+  border: 1px solid #333;
+  color: var(--nimble-gray-dim);
+  font-family: 'Courier New', monospace;
+  font-size: 0.7rem;
+  padding: 3px 8px;
+  cursor: pointer;
+  text-align: left;
+  width: fit-content;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.tokenBtn:hover {
+  color: var(--nimble-accent);
+  border-color: rgba(183, 255, 60, 0.4);
+}
+
+.fontDesc {
+  font-size: 0.8125rem;
+  color: var(--nimble-gray);
+  line-height: 1.5;
+}
+
+.weightRow {
+  display: flex;
+  gap: var(--nimble-space-sm);
+  flex-wrap: wrap;
+}
+
+.weightChip {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  color: var(--nimble-white);
+  font-size: 0.75rem;
+  padding: 4px 10px;
+}
+
+/* ── Type scale ──────────────────────────────────────────────── */
+.scaleList {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.scaleRow {
+  display: flex;
+  align-items: center;
+  gap: var(--nimble-space-xl);
+  padding: var(--nimble-space-lg) 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.scaleRow:first-child {
+  border-top: 1px solid #1a1a1a;
+}
+
+.scaleMeta {
+  width: 160px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.scaleLabel {
+  font-family: var(--nimble-font-headline);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--nimble-white);
+}
+
+.scaleSpec {
+  font-family: var(--nimble-font-body);
+  font-size: 0.7rem;
+  color: var(--nimble-gray-dim);
+}
+
+.scaleSample {
+  color: var(--nimble-white);
+  line-height: 1.1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .fontCards {
+    grid-template-columns: 1fr;
+  }
+  .scaleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--nimble-space-sm);
+  }
+  .scaleMeta {
+    width: auto;
+  }
+}

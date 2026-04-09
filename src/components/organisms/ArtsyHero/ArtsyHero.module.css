@@ -1,0 +1,56 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  min-height: 600px;
+  background-color: var(--nimble-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--nimble-space-xxl);
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 900px;
+}
+
+.title {
+  font-family: var(--nimble-font-headline);
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: var(--nimble-space-lg);
+  text-transform: uppercase;
+}
+
+.subtitle {
+  font-family: var(--nimble-font-body);
+  font-size: 1.25rem;
+  color: var(--nimble-gray);
+  margin-bottom: var(--nimble-space-xl);
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.imageLayer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+  background-size: cover;
+  background-position: center;
+  filter: grayscale(100%) contrast(120%);
+}
+
+.accentLine {
+  width: 100px;
+  height: 4px;
+  background-color: var(--nimble-accent);
+  margin: 0 auto var(--nimble-space-lg);
+}

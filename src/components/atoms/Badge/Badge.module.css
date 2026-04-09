@@ -1,0 +1,26 @@
+.badge {
+  display: inline-flex;
+  padding: 2px 8px;
+  font-family: var(--nimble-font-headline);
+  font-weight: 900;
+  font-size: 0.625rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 0;
+}
+
+.accent {
+  background-color: var(--nimble-accent);
+  color: var(--nimble-black);
+}
+
+.outline {
+  background-color: transparent;
+  color: var(--nimble-white);
+  border: 1px solid var(--nimble-white);
+}
+
+.dark {
+  background-color: var(--nimble-charcoal);
+  color: var(--nimble-white);
+}

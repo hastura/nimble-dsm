@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700;900&family=Inter:wght@400;500;700&display=swap');
+
+:root {
+  /* Colors */
+  --nimble-black: #000000;
+  --nimble-charcoal: #111111;
+  --nimble-charcoal-2: #1a1a1a;
+  --nimble-white: #F5F5F5;
+  --nimble-gray: #A1A1A1;
+  --nimble-gray-dim: #555555;
+  --nimble-accent: #B7FF3C;
+  --nimble-error: #FF4D4D;
+
+  /* Typography */
+  --nimble-font-headline: 'Sora', sans-serif;
+  --nimble-font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --nimble-space-xs: 4px;
+  --nimble-space-sm: 8px;
+  --nimble-space-md: 16px;
+  --nimble-space-lg: 24px;
+  --nimble-space-xl: 32px;
+  --nimble-space-xxl: 64px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--nimble-black);
+  color: var(--nimble-white);
+  font-family: var(--nimble-font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--nimble-font-headline);
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}

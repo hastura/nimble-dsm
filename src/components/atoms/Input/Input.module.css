@@ -1,0 +1,64 @@
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-xs);
+  width: 100%;
+}
+
+/* Label */
+.label {
+  font-family: var(--nimble-font-headline);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--nimble-gray);
+  letter-spacing: 0.05em;
+  transition: color 0.2s;
+}
+
+.labelFocus {
+  color: var(--nimble-accent);
+}
+
+.labelError {
+  color: var(--nimble-error);
+}
+
+/* Input */
+.input {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--nimble-gray);
+  padding: var(--nimble-space-sm) 0;
+  color: var(--nimble-white);
+  font-family: var(--nimble-font-body);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.input:focus,
+.inputFocus {
+  border-bottom-color: var(--nimble-accent);
+}
+
+.inputError {
+  border-bottom-color: var(--nimble-error);
+}
+
+.inputDisabled {
+  cursor: not-allowed;
+}
+
+.input::placeholder {
+  color: var(--nimble-gray-dim);
+}
+
+/* Error message */
+.errorMsg {
+  font-family: var(--nimble-font-body);
+  font-size: 0.75rem;
+  color: var(--nimble-error);
+  margin-top: 2px;
+}

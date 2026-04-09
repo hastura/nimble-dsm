@@ -1,0 +1,170 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-xxl);
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-md);
+}
+
+.pageTitle {
+  font-family: var(--nimble-font-headline);
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--nimble-white);
+}
+
+.pageDesc {
+  color: var(--nimble-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+/* ── Block ───────────────────────────────────────────────────── */
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-lg);
+}
+
+.blockLabel {
+  font-family: var(--nimble-font-headline);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--nimble-gray-dim);
+  padding-bottom: var(--nimble-space-sm);
+  border-bottom: 1px solid #1e1e1e;
+}
+
+/* ── Scale rows ──────────────────────────────────────────────── */
+.scaleList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--nimble-space-xl);
+  padding: var(--nimble-space-md) var(--nimble-space-lg);
+  background: var(--nimble-charcoal);
+  border: 1px solid #1e1e1e;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.row:hover {
+  border-color: rgba(183, 255, 60, 0.2);
+  background: rgba(183, 255, 60, 0.02);
+}
+
+.rowMeta {
+  display: flex;
+  align-items: center;
+  gap: var(--nimble-space-lg);
+  width: 320px;
+  flex-shrink: 0;
+}
+
+.rowLabel {
+  font-family: var(--nimble-font-headline);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--nimble-white);
+  width: 36px;
+}
+
+.rowPx {
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: var(--nimble-accent);
+  width: 40px;
+}
+
+.rowToken {
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  color: var(--nimble-gray-dim);
+}
+
+.rowViz {
+  display: flex;
+  align-items: center;
+  gap: var(--nimble-space-md);
+  flex: 1;
+}
+
+.vizBar {
+  height: 2px;
+  background: var(--nimble-accent);
+  opacity: 0.4;
+  min-width: 4px;
+  max-width: 500px;
+  transition: opacity 0.2s;
+}
+
+.row:hover .vizBar {
+  opacity: 1;
+}
+
+.vizSquare {
+  background: rgba(183, 255, 60, 0.15);
+  border: 1px solid rgba(183, 255, 60, 0.3);
+  flex-shrink: 0;
+  min-width: 4px;
+  min-height: 4px;
+}
+
+/* ── Table ───────────────────────────────────────────────────── */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table th {
+  font-family: var(--nimble-font-headline);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--nimble-gray);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid #222;
+  background: var(--nimble-charcoal);
+}
+
+.table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #1a1a1a;
+  color: var(--nimble-gray);
+  vertical-align: middle;
+}
+
+.table td:first-child {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--nimble-white);
+}
+
+.table td:nth-child(2) {
+  font-family: 'Courier New', monospace;
+  color: var(--nimble-accent);
+  font-size: 0.8rem;
+}
+
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}

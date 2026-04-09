@@ -1,0 +1,65 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--nimble-space-md) var(--nimble-space-xl);
+  font-family: var(--nimble-font-headline);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  gap: var(--nimble-space-sm);
+  letter-spacing: 0.05em;
+}
+
+/* Base Variants */
+.primary {
+  background-color: var(--nimble-accent);
+  color: var(--nimble-black);
+}
+
+.secondary {
+  background-color: transparent;
+  color: var(--nimble-white);
+  border: 1px solid var(--nimble-white);
+}
+
+/* Hover States (Real & Pseudo) */
+.primary:hover, .primary_hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.secondary:hover, .secondary_hover {
+  background-color: var(--nimble-white);
+  color: var(--nimble-black);
+}
+
+/* Active States (Real & Pseudo) */
+.primary:active, .primary_active {
+  transform: translateY(0);
+  filter: brightness(0.9);
+}
+
+.secondary:active, .secondary_active {
+  background-color: var(--nimble-accent);
+  border-color: var(--nimble-accent);
+  color: var(--nimble-black);
+}
+
+/* Disabled States */
+.button:disabled, .disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  filter: grayscale(1);
+}
+
+.fullWidth {
+  width: 100%;
+}
+

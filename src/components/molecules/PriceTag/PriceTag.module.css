@@ -1,0 +1,19 @@
+.priceTag {
+  display: flex;
+  align-items: baseline;
+  gap: var(--nimble-space-sm);
+  font-family: var(--nimble-font-headline);
+}
+
+.current {
+  color: var(--nimble-white);
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.original {
+  color: var(--nimble-gray);
+  text-decoration: line-through;
+  font-size: 0.875rem;
+  font-weight: 400;
+}

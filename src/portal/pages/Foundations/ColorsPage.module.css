@@ -1,0 +1,177 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-xxl);
+}
+
+/* ── Header ──────────────────────────────────────────────────── */
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-md);
+}
+
+.pageTitle {
+  font-family: var(--nimble-font-headline);
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--nimble-white);
+}
+
+.pageDesc {
+  color: var(--nimble-gray);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 580px;
+}
+
+/* ── Swatch grid ─────────────────────────────────────────────── */
+.swatchGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: var(--nimble-space-md);
+}
+
+.swatch {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #222;
+  overflow: hidden;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.swatch:hover {
+  border-color: #444;
+  transform: translateY(-2px);
+}
+
+.swatchColor {
+  position: relative;
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.copyHint {
+  font-family: var(--nimble-font-headline);
+  font-size: 9px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(245, 245, 245, 0.7);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.copyHintDark {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.swatch:hover .copyHint {
+  opacity: 1;
+}
+
+.swatchInfo {
+  padding: var(--nimble-space-md);
+  background: var(--nimble-charcoal);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.swatchHex {
+  font-family: 'Courier New', monospace;
+  font-size: 0.875rem;
+  color: var(--nimble-white);
+  font-weight: 600;
+}
+
+.swatchName {
+  font-family: var(--nimble-font-headline);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--nimble-gray);
+}
+
+.tokenBtn {
+  background: none;
+  border: 1px solid #333;
+  color: var(--nimble-gray-dim);
+  font-family: 'Courier New', monospace;
+  font-size: 0.65rem;
+  padding: 3px 6px;
+  cursor: pointer;
+  text-align: left;
+  transition: color 0.15s, border-color 0.15s;
+  margin-top: 4px;
+}
+
+.tokenBtn:hover {
+  color: var(--nimble-accent);
+  border-color: rgba(183, 255, 60, 0.4);
+}
+
+/* ── Usage table ─────────────────────────────────────────────── */
+.usageTable {
+  display: flex;
+  flex-direction: column;
+  gap: var(--nimble-space-md);
+}
+
+.usageHeader {
+  font-family: var(--nimble-font-headline);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--nimble-gray-dim);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table th {
+  font-family: var(--nimble-font-headline);
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--nimble-gray);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid #222;
+  background: var(--nimble-charcoal);
+}
+
+.table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid #1a1a1a;
+  color: var(--nimble-gray);
+  font-family: var(--nimble-font-body);
+  vertical-align: middle;
+}
+
+.table td:first-child {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+  color: var(--nimble-white);
+}
+
+.table td:nth-child(2) {
+  font-family: 'Courier New', monospace;
+  font-size: 0.8rem;
+}
+
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}

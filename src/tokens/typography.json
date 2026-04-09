@@ -1,0 +1,14 @@
+{
+  "typography": {
+    "fonts": {
+      "headline": "Sora, sans-serif",
+      "body": "Inter, sans-serif"
+    },
+    "sizes": {
+      "display": "64px",
+      "h1": "32px",
+      "body": "16px",
+      "label": "12px"
+    }
+  }
+}
