@@ -10,8 +10,8 @@ interface PortalLayoutProps {
 const NAV: Record<string, string[]> = {
   Foundations: ['Colors', 'Typography', 'Spacing'],
   Atoms:       ['Button', 'Input', 'Badge'],
-  Molecules:   ['PriceTag', 'ProductCard'],
-  Organisms:   ['GlobalHeader', 'ProductGrid'],
+  Molecules:   ['PriceTag', 'ProductCard', 'MarqueeTicker'],
+  Organisms:   ['GlobalHeader', 'ProductGrid', 'ArtsyHero', 'ManifestoSection', 'CategoryGrid', 'FooterSection'],
 };
 
 export const PortalLayout: React.FC<PortalLayoutProps> = ({

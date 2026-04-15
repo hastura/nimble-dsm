@@ -16,10 +16,15 @@ import { Badge }   from './components/atoms/Badge/Badge'
 // Molecules
 import { PriceTag }    from './components/molecules/PriceTag/PriceTag'
 import { ProductCard } from './components/molecules/ProductCard/ProductCard'
+import { MarqueeTicker } from './components/molecules/MarqueeTicker/MarqueeTicker'
 
 // Organisms
 import { GlobalHeader } from './components/organisms/GlobalHeader/GlobalHeader'
 import { ProductGrid }  from './components/organisms/ProductGrid/ProductGrid'
+import { ArtsyHero } from './components/organisms/ArtsyHero/ArtsyHero'
+import { ManifestoSection } from './components/organisms/ManifestoSection/ManifestoSection'
+import { CategoryGrid } from './components/organisms/CategoryGrid/CategoryGrid'
+import { FooterSection } from './components/organisms/FooterSection/FooterSection'
 
 /* ────────────────────────────────────────────────────────────────
    Shared layout helpers (inline, no extra files)
@@ -396,6 +401,105 @@ function ProductGridPage() {
   )
 }
 
+function MarqueeTickerPage() {
+  return (
+    <ComponentDoc
+      title="MarqueeTicker"
+      type="Molecule"
+      description="Infinite scrolling text block commonly used for announcements, taglines, or dividing sections."
+      code={`<MarqueeTicker text="Performance Driven // Street Ready // Hybrid Lifestyle" />`}
+    >
+      <div>
+        <SectionTitle>Live Prototype</SectionTitle>
+        <div style={{ border: '1px solid #1e1e1e', overflow: 'hidden' }}>
+          <MarqueeTicker text="Performance Driven // Street Ready // Hybrid Lifestyle" />
+        </div>
+      </div>
+    </ComponentDoc>
+  )
+}
+
+function ArtsyHeroPage() {
+  return (
+    <ComponentDoc
+      title="ArtsyHero"
+      type="Organism"
+      description="Large-impact hero section with a bold brand statement and primary calls to action."
+      code={`<ArtsyHero title="BUILT UNBOUND STREETS" subtitle="Core Hybrid Division" ctaText="GET THE DROP" />`}
+    >
+      <div>
+        <SectionTitle>Live Prototype</SectionTitle>
+        <div style={{ border: '1px solid #1e1e1e', overflow: 'hidden' }}>
+          <ArtsyHero title="BUILT UNBOUND" subtitle="CORE HYBRID DIVISION" ctaText="GET THE DROP" />
+        </div>
+      </div>
+    </ComponentDoc>
+  )
+}
+
+function ManifestoSectionPage() {
+  return (
+    <ComponentDoc
+      title="ManifestoSection"
+      type="Organism"
+      description="A text-heavy section pairing a strong brand statement with lifestyle imagery."
+      code={`<ManifestoSection headline={...} body="..." />`}
+    >
+      <div>
+        <SectionTitle>Live Prototype</SectionTitle>
+        <div style={{ border: '1px solid #1e1e1e', overflow: 'hidden' }}>
+          <ManifestoSection 
+            headline={<>BUILT FOR<br />THE ONES WHO<br />NEVER LOG OUT<span style={{color: '#B7FF3C'}}>.</span></>}
+            body="WE DON'T JUST MAKE CLOTHES. WE BUILD UNIFORMS FOR THE HYBRID LIFESTYLE. COMFORTABLE FOR A 12-HOUR GRIND, SHARP ENOUGH FOR THE STREETS."
+          />
+        </div>
+      </div>
+    </ComponentDoc>
+  )
+}
+
+function CategoryGridPage() {
+  return (
+    <ComponentDoc
+      title="CategoryGrid"
+      type="Organism"
+      description="A large 3-column grid showcasing main product categories with hover image reveals."
+      code={`<CategoryGrid categories={[...]} />`}
+    >
+      <div>
+        <SectionTitle>Live Prototype</SectionTitle>
+        <div style={{ border: '1px solid #1e1e1e', overflow: 'hidden' }}>
+          <CategoryGrid 
+            categories={[
+              { id: '1', title: 'APPAREL', index: 1, imageUrl: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80' },
+              { id: '2', title: 'GEAR', index: 2, imageUrl: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&q=80' },
+              { id: '3', title: 'ACCESSORIES', index: 3, imageUrl: 'https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?auto=format&fit=crop&q=80' }
+            ]}
+          />
+        </div>
+      </div>
+    </ComponentDoc>
+  )
+}
+
+function FooterSectionPage() {
+  return (
+    <ComponentDoc
+      title="FooterSection"
+      type="Organism"
+      description="Standard site footer featuring newsletter signup, catalog links, and legal mentions."
+      code={`<FooterSection />`}
+    >
+      <div>
+        <SectionTitle>Live Prototype</SectionTitle>
+        <div style={{ border: '1px solid #1e1e1e', overflow: 'hidden' }}>
+          <FooterSection />
+        </div>
+      </div>
+    </ComponentDoc>
+  )
+}
+
 /* ────────────────────────────────────────────────────────────────
    App root
 ──────────────────────────────────────────────────────────────── */
@@ -418,6 +522,11 @@ function App() {
       // Organisms
       case 'GlobalHeader': return <GlobalHeaderPage />
       case 'ProductGrid':  return <ProductGridPage />
+      case 'MarqueeTicker': return <MarqueeTickerPage />
+      case 'ArtsyHero': return <ArtsyHeroPage />
+      case 'ManifestoSection': return <ManifestoSectionPage />
+      case 'CategoryGrid': return <CategoryGridPage />
+      case 'FooterSection': return <FooterSectionPage />
       default:             return <ColorsPage />
     }
   }
