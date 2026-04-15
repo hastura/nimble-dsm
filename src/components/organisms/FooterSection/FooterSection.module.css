@@ -37,7 +37,7 @@
 
 .outlineText {
   -webkit-text-stroke: 2px var(--nimble-black, #000);
-  color: transparent;
+  color: var(--nimble-white, #fff);
 }
 
 .newsletterInput {

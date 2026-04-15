@@ -12,10 +12,37 @@ export const FooterSection: React.FC = () => {
         <div className={styles.topGrid}>
           
           <div className={styles.brandingCol}>
-            <h4 className={styles.logoTitle}>
-              NIMBLE<br />
-              <span className={styles.outlineText}>REBELS_</span>
-            </h4>
+            <div className={styles.logoTitle} aria-label="NIMBLE REBELS_">
+              <svg height="1em" viewBox="0 0 360 90" style={{ overflow: 'visible', display: 'block', marginBottom: '10px' }}>
+                <text 
+                  x="0" y="75" 
+                  fontFamily="var(--nimble-font-headline, 'Inter', sans-serif)" 
+                  fontSize="85" 
+                  fontWeight="900" 
+                  fontStyle="italic"
+                  letterSpacing="-0.05em"
+                  fill="var(--nimble-black, #000)"
+                >
+                  NIMBLE
+                </text>
+              </svg>
+              <svg height="1em" viewBox="0 0 420 90" style={{ overflow: 'visible', display: 'block' }}>
+                <text 
+                  x="0" y="75" 
+                  fontFamily="var(--nimble-font-headline, 'Inter', sans-serif)" 
+                  fontSize="85" 
+                  fontWeight="900" 
+                  fontStyle="italic"
+                  letterSpacing="-0.05em"
+                  style={{ paintOrder: 'stroke fill' }}
+                  fill="var(--nimble-white, #fff)" 
+                  stroke="black" 
+                  strokeWidth="2px"
+                >
+                  REBELS_
+                </text>
+              </svg>
+            </div>
             
             <div className={styles.newsletterInput}>
               <input 
